@@ -1,9 +1,18 @@
 'use strict'
 
 const button = document.querySelector('.qr__button')
-const inputValue = document.querySelector('.qr__input').value
+const inputValue = document.querySelector('.qr__input')
 const qrImage = document.querySelector('.qr__image')
-button.addEventListener('click', () => {
+
+const generateQR = url => {
 	qrImage.innerHTML = `
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${inputValue}">`
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${url}">
+    `
+}
+
+button.addEventListener('click', () => {
+	const url = inputValue.value
+	if (url.trim() !== '') {
+		generateQR(url)
+	}
 })
