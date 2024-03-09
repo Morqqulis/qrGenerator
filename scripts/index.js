@@ -11,8 +11,6 @@ const generateQR = url => {
 }
 
 button.addEventListener('click', () => {
-	const url = inputValue.value
-	if (url.trim() !== '') {
-		generateQR(url)
-	}
+	const url = inputValue.value.trim()
+	url !== '' ? generateQR(url) : null
 })
