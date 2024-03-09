@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
 body {
 	background: #162045;
+	font-family: 'Poppins', sans-serif;
 	color: #fff;
 }
 .qr {
@@ -32,9 +35,6 @@ body {
 
 .qr__image {
 	max-width: 100%;
-	overflow: hidden;
-	img {
-	}
 }
 .qr__form {
 	display: flex;
